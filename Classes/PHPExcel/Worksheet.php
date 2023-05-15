@@ -1474,7 +1474,7 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
      * @param $pValue PHPExcel_Style_Conditional[]
      * @return PHPExcel_Worksheet
      */
-    public function setConditionalStyles($pCoordinate = 'A1', $pValue)
+    public function setConditionalStyles($pCoordinate, $pValue) //PHPExcel 1.8.1 had $pCoordinate = 'A1'. BUT! Deprecated: Optional parameter $pCoordinate declared before required parameter $pValue is implicitly treated as a required parameter.
     {
         $this->conditionalStylesCollection[strtoupper($pCoordinate)] = $pValue;
         return $this;
